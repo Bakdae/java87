@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="StyleMapper">
+ 	
+	<resultMap id="StyleSelectMap" type="style">
+		<result property="styleNo" 			column="STYLE_NO" 		jdbcType="NUMERIC" />
+		<result property="fileName" 			column="STY_IMGPATH" 		jdbcType="VARCHAR" />
+		<result property="tnFileName" 			column="STY_TN_IMGPATH" 		jdbcType="VARCHAR" />
+		<result property="styleTitle" 			column="STY_TITLE" 		jdbcType="VARCHAR" />
+		<result property="infomation1" 			column="STY_INFO1" 		jdbcType="VARCHAR" />
+		<result property="infomation2" 			column="STY_INFO2" 		jdbcType="VARCHAR" />
+		<result property="infomation3" 			column="STY_INFO3" 		jdbcType="VARCHAR" />
+		<result property="infomation4" 			column="STY_INFO4" 		jdbcType="VARCHAR" />
+		<result property="infomation5" 			column="STY_INFO5" 		jdbcType="VARCHAR" />
+		<result property="styleLike" 			column="STY_LIKE" 		jdbcType="VARCHAR" />
+		<result property="hashTagString" 			column="STY_HASHTAG" 		jdbcType="VARCHAR" />
+		<result property="regDate" 			column="STY_REG_DATE" 		jdbcType="DATE" />
+		<result property="styleDesc" 			column="STY_DESC" 		jdbcType="CLOB" />
+		<association property="user_no" select="UserMapper.getUser1" column="user_no" javaType="bitcamp.java87.project01.domain.User"></association>
+	</resultMap>
+	<!-- SQL : INSERT -->
+	<insert 	id="addStyle"		parameterType="style" >
+	 	INSERT
+		INTO Style
+		VALUES	 (STYLE_SEQ.NEXTVAL,#{user_no.user_no}.,#{fileName},#{tnFileName},#{styleTitle},#{infomation1:VARCHAR},#{infomation2:VARCHAR},#{infomation3:VARCHAR},#{infomation4:VARCHAR}, #{infomation5:VARCHAR},#{hashTagString:VARCHAR},#{styleLike:VARCHAR},SYSDATE,#{styleDesc:VARCHAR})
+	 </insert>
+	 
+	 <!-- SQL : SELECT ONE -->
+	 <select 	id="getStyle"	parameterType="int"	resultMap="StyleSelectMap">
+		SELECT *
+		FROM Style
+		WHERE STYLE_NO = #{styleNo}
+	 </select>
+	 
+	    <select  id="getStyleBy" parameterType="int" resultMap="StyleSelectMap">
+    SELECT *
+    FROM Style
+    WHERE STYLE_NO = #{styleNo}
+   </select>
+	 
+	 <!-- SQL : UPDATE -->
+	 <update	id="updateStyle"	parameterType="Style" >
+	   	UPDATE Style
+	   	<set>
+	   		style_NAME 	= #{styleName} ,
+			style_DETAIL	= #{styleDetail},
+			MANUFACTURE_DAY 	= #{manuDate} ,
+			PRICE				=	#{price}
+	   	</set>
+	   	WHERE style_NO = #{styleNo}
+	 </update>
+	 
+	 <!-- delete -->
+	 <delete id="deleteStyle" parameterType="int">
+	 	delete Style
+	 	where style_no = #{value}
+	 </delete>
+	 
+		 
+	<!-- SQL : SELECT LIST -->
+	<select  id="getStyleList"  parameterType="search"	resultMap="StyleSelectMap">
+	   select X.rnum, X.STYLE_NO , X.STY_TN_IMGPATH, X.phot_path, X.STY_TITLE, X.STY_HASHTAG, X.user_no, X.STY_REG_DATE
+       from (
+                select rownum as rnum, A.STYLE_NO, A.STY_TN_IMGPATH, A.phot_path, A.STY_TITLE, A.STY_HASHTAG, A.user_no, A.STY_REG_DATE
+                from(
+                        select STYLE_NO, STY_TN_IMGPATH, ui.phot_path, STY_TITLE, STY_HASHTAG, ui.user_no, STY_REG_DATE
+                        from style s, user_info ui
+                        where s.user_no = ui.user_no ) A
+                where rownum &lt;= #{offSet} ) X
+        where X.rnum <![CDATA[ >=]]> 1
+        order by X.STY_REG_DATE	DESC  
+	 </select> 
+	 
+	 
+
+	 	<!--  위 두번째 subQuery 의  
+	 			WHERE ROWNUM &lt;= #{endRowNum} ) 는
+	 			WHERE ROWNUM <= #{endRowNum} ) 의미이며..
+	 			< 는 keyword 로 &lt; 를	사용.
+	 			
+	 			<![CDATA[  ~~~  ]]> 를 이용하여 아래와 같이 사용  할 수 있다.
+	 			CDATA ==> Character Data 의 의미 Java 에서 \n 같은 특수문자 처리  
+
+				WHERE ROWNUM <![CDATA[ <=]]> #{endRowNum} )
+		-->
+	 
+</mapper>

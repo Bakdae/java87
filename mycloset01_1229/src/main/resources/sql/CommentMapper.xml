@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CommentMapper">
+
+	<resultMap id="commentSelectMap" type="comment">
+		<result property="cmtNo" column="cmt_no" jdbcType="NUMERIC" />
+		<result property="styleNo" column="style_no" jdbcType="NUMERIC" />
+		<result property="userNo" column="user_no" jdbcType="NUMERIC" />
+		<result property="nick" column="nick" jdbcType="VARCHAR" />
+		<result property="content" column="content" jdbcType="VARCHAR" />
+		<result property="hrs" column="hrs" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<insert id="addComment" parameterType="comment">
+		INSERT
+		INTO cmt_info ( cmt_no , style_no , nick, user_no , content , hrs)
+		VALUES (COMMENT_SEQ.NEXTVAL, #{styleNo} , #{nick}, #{userNo} , #{content}
+		, #{hrs})
+	</insert>
+
+	<select id="getComment" parameterType="int" resultMap="commentSelectMap">
+	SELECT
+	cmt_no, style_no, user_no, nick, content, hrs
+	FROM cmt_info
+	WHERE
+	style_no = #{value}
+	</select>
+
+
+</mapper>

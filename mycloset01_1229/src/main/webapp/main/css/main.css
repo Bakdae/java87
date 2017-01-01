@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+
+html, body {
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#grid {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.item{
+	margin-left:10px;
+}
+#itemID {
+	/* margin:1%; */
+	padding: 3px;
+	width: 230px;
+	border: 10px;
+	border-color: #ECECEC;
+	border-radius: 15px;
+	box-shadow: gray;
+}
+/* 썸네일 DIV 태그  */
+div.thbnl {
+	border-color: #aab2bd;
+	border-radius: 15px;
+}
+/* 썸네일 호버 */
+#tnID:hover {
+	background-color: #ECECEC;
+}
+/* 카드속 포스트 사진을 감싼 DIV  */
+div.imgContent {
+	padding: 2px;
+}
+/* 카드별 사진 이미지 */
+img.img-rounded {
+	width: 210px;
+	border-radius: 10px;
+	margin-left: 5px;
+	margin-top: 4px;
+}
+
+/* 프로필 이미지 */
+div.profile img.imgProfile {
+	padding: 2px;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 12px;
+	margin-left: 175px;
+}
+
+/* 옷걸이 이미지 */
+div.hanger img#imgHanger {
+	margin: 0px;
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	top: 10px;
+	margin-left: 172px;
+	display: none;
+	cursor: pointer;
+}
+
+/* 공통적용사항 */
+#tnID:hover p {
+	display: block;
+}
+
+/* 썸네일 호버일때 옷걸이이미지 */
+#tnID:hover div.hanger img#imgHanger {
+	display: block;
+}
+
+/* 썸네일 호버일때 옷걸이이미지 */
+#TNID:hover div.imgContent img.img-rounded {
+	
+}
+
+/* 옷걸이 이미지 호버시
+div.hanger img#imgHanger:hover {
+	opacity: 0.5;
+	cursor: pointer;
+	transition: opacity 0.5s;
+}
+ */
+
+/* 옷걸이 이미지 클릭시 */
+div.hanger img#imgHanger:active {
+	margin-top: 3px;
+}
+/* 썸네일 호버일때 옷걸이이미지 */
+#TNID:hover div.hanger {
+	display: block;
+}
+
+/* 프로필 이미지 호버시*/
+#TNID:hover div.profile img.imgProfile {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+/* 바텀 캡션 포스트 제목과 내용을 감싼 DIV */
+div.bottom_caption {
+	padding: 4%;
+}
+
+p.postText {
+	border-radius: 10px;
+	width: 210px;
+	background-color: black;
+	color: white;
+	font-size: 12px;
+	display: none;
+	position: absolute;
+	left: 10px;
+	bottom: 58px;
+	opacity: 0.5;
+	text-align: center;
+	cursor: pointer;
+}
+
+div.postTitle {
+	width:160px;
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 2px;
+}
+
+div.postDesc {
+	font-size: 12px;
+}

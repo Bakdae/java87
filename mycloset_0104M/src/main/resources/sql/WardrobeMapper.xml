@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="WardrobeMapper">
+    
+	<resultMap id="wardrobeSelectMap" type="wardrobe">
+		<result property="cls_no" column="cls_no" jdbcType="NUMERIC" />
+		<result property="cls_name" column="cls_name" jdbcType="VARCHAR" />
+		<result property="user_no" column="user_no" jdbcType="NUMERIC" />
+	</resultMap>
+    
+	<!-- SQL : INSERT -->
+	<insert id="addWardrobe" parameterType="wardrobe">
+		INSERT
+		INTO myCloset(cls_no, user_no, cls_name)
+		VALUES (
+		seq_mycloset_cls_no.nextval,
+		#{user_no:NUMERIC},
+		#{cls_name:VARCHAR})
+	</insert>
+    
+	<!-- SQL : SELECT ONE -->
+	<select id="getWardrobeByUserNo" parameterType="wardrobe" resultMap="wardrobeSelectMap">
+		SELECT
+		user_no, cls_no, cls_name
+		FROM myCloset
+		WHERE user_no = #{user_no}
+		                AND cls_name = #{cls_name}
+	</select>
+	
+	<!-- SQL : SELECT ONE -->
+	<select id="getWardrobeByClsNo" parameterType="integer" resultMap="wardrobeSelectMap">
+		SELECT
+		user_no, cls_no, cls_name
+		FROM myCloset
+		WHERE cls_no = #{value}
+	</select>
+	
+	
+	<!-- SQL : SELECT LIST -->
+	<select id="getWardrobeList" parameterType="INTEGER" resultMap="wardrobeSelectMap">
+		SELECT
+		cls_no, cls_name
+		FROM myCloset
+		WHERE user_no = #{value}
+		ORDER BY cls_no DESC
+	</select>
+
+	<!-- SQL : UPDATE -->
+	<update id="updateWardrobe" parameterType="wardrobe">
+		UPDATE myCloset
+		<set>
+			cls_name = #{cls_name}
+		</set>
+		WHERE cls_no = #{cls_no}
+	</update>
+
+	<!-- SQL : DELETE -->
+	<delete id="deleteWardrobe" parameterType="int">
+		DELETE
+        FROM myCloset
+        WHERE cls_no = #{value}
+	</delete>
+
+</mapper>

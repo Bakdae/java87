@@ -1,0 +1,83 @@
+/* 댓글창 오픈 버튼  */
+#commentButton {
+  margin-top: 7px;
+  width: 400px;
+  border: 1px solid #F5F5F5;
+  background-color: white;
+  /* border-radius: 70px; */
+}
+
+/* 댓글입력시 보이는 이미지  */
+#comment_icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2px;
+  border: 1px solid gold;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+/* 댓글입력창 textarea  */
+ .form-control{
+ width:348px;
+ position: relative;
+ top:10px;
+} 
+
+/* 댓글 입력 완료 버튼  */
+#cmt_insert{
+position:relative;
+top:-24px;
+left:353px;
+margin-right:11px;
+
+height:36px;
+}
+
+.delCmtBtn{
+  float: right;
+}
+
+#delBtn{
+border-color: white;
+background-color: #F5F5F5;
+color:black;
+}
+
+.btn btn-danger btn-xs{
+background-color: white;
+}
+
+#comment_icon{
+position: static;
+}
+
+/* 댓글 시간 */
+#cmt_hrs{
+margin-left: 18px;
+font-size:2px;
+font-face: Comic Sans MS;
+
+} 
+
+#cmt_nick{
+margin-left: 5px;
+font-weight: bold
+}
+
+#cmt_content{
+ margin-left: 5px;
+ margin-top: 5px;
+}
+
+#cmt_all2{
+padding-right: 8px;
+
+}
+
+#cmt_tab{
+width:400px;
+background-color: white;
+}

@@ -1,0 +1,100 @@
+@CHARSET "UTF-8" !important;
+
+form {
+    width:360px !important !important;
+    margin: auto !important;	
+}
+
+#accountWrap {	
+	width: 360px !important;
+	margin: 100px auto 10px !important;
+	padding: 10px 20px !important;
+	border-radius: 10px !important;
+	box-shadow: 3px 3px 10px #eee !important;
+	background: #fff !important;
+}
+
+.acnt-title {
+	padding-bottom: 15px !important;
+	margin: -93px 20px 10px 20px !important;
+	border-bottom: 1px solid #eee !important;
+	text-shadow: 1px 1px #fff !important;
+}
+
+#acntUserImgWrap {
+    width: 165px !important;
+    height: 165px !important;
+    position: relative !important;
+    margin: auto !important;
+    top: -95px !important;
+    border: 7px solid #fff !important;
+    border-radius: 50% !important;
+    display: block !important;
+    margin: auto !important;
+    margin-bottom: 20px !important;
+}
+
+#acnt-user-img {
+}
+
+#acnt-profile>label {
+	display: block !important;
+	margin: auto !important;
+	position: relative !important;
+	top: -105px !important;
+	width: 30% !important;
+	padding: .4em .5em !important;
+	font-size: 11px !important;
+	line-height: normal !important;
+	vertical-align: middle !important;
+	cursor: pointer !important;
+	border: 1px solid #ebebeb !important;
+	border-bottom-color: #e2e2e2 !important;
+	border-radius: 5px !important;
+}
+
+#acnt-input-file {
+	display: none !important;
+}
+
+#acnt-info-box {
+	margin-top: -30px !important;
+	padding: 0px 30px !important;
+}
+
+#acnt-input-file {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	border: 0 !important;
+	overflow: hidden !important;
+	position: relative !important;
+	top: -70px !important;
+}
+
+#inputPwd, #inputEmail, #inputConPwd, #inputName {
+	height: 24px !important;
+	border-radius: 0px !important;
+	border: none !important;
+	box-shadow: none !important;
+	border-bottom: 1px solid #ccc !important;
+	margin-bottom: 10px !important;
+	padding-left: 5px !important;
+}
+
+.form-group>label {
+	font-size: 12px !important;
+}
+
+#acnt-info, #acnt-pwd, #acnt-con-pwd {
+	margin-bottom: 25px !important;
+}
+
+#acnt-btn {
+	display: block !important;
+    margin: 10px auto 10px !important;
+}

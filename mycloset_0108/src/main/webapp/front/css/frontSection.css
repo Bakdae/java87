@@ -1,0 +1,343 @@
+a {
+	text-decoration: none;
+}
+
+a:visited, a:hover, a:active, a:focus {
+	text-decoration: none;
+}
+
+.firstSecTextWrap {
+	display: inline-block;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	padding: 17px;
+	margin-bottom: 35px;
+}
+
+.frontSecCopy {
+	font-size: 17px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.frontSecTitle {
+	font-weight: 600;
+	color: #fff;
+	font-size: 40px;
+	margin-bottom: 40px;
+	text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+#myBtn {
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 1px solid #fff;
+	font-size: 16px;
+	color: #fff;
+	width: 268px;
+	heigh: 32px;
+	line-height: 32px;
+}
+
+.pwdCheckLink {
+	display: block;
+	font-size: 13px;
+	padding-bottom: 13px;
+	color: #392daa;
+}
+
+.btn-danger {
+	color: #d43f3a;
+	background: #fff;
+	border-color: #d43f3a;
+	font-size: 12px;
+	height: 26px;
+	vertical-align: middle;
+	margin-top:20px;
+	padding: 5px 10px;
+}
+
+#echeck {
+	padding: 6px;
+	margin-top: 9px;
+    color: #333;
+    display: inline-block;
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+#ekey {
+    margin-top: 9px;
+    margin-left: 5px;
+    height: 30px;
+    border-radius: 4px 0px 0px 4px;
+    padding-left: 5px;
+    font-size: 12px;
+	
+}
+
+#ekeySubmit {
+	border: 1px solid #ddd;
+	height: 30px;
+	padding-bottom: 0px;
+	margin-left: -5px;
+	border-radius: 0px 4px 4px 0px;
+	background: #fff;
+	font-size: 12px;
+}
+
+#emailcheck, 
+#addCheck, 
+#add2Check,
+#pwdcheck,
+#pwdcheck {
+	margin-top: 6px;
+    margin-left: 5px;
+    font-size: 90%;
+    color: #bd081c;
+}
+
+.regEmailForm {
+	margin-bottom: 17px;
+}
+
+#resultDIV {
+	display: inline-block;
+}
+
+#register-submit {
+	margin-top: 17px;
+    font-weight: normal;
+    padding: 10px 0;
+}
+
+.LastSecText {
+	display: block;
+	color: #fff;
+	font-size: 24px;
+	
+}
+
+
+/* 2번째 섹션 CSS */
+.section02Text,
+.section03Text,
+.section04Text {
+	color: #fff;
+	display: block;
+	margin: 40px 0px 20px 0px;
+	font-size: 32px;
+	font-weight: 500;
+}
+
+.section02Exp,
+.section03Exp,
+.section04Exp {
+	color: #fff;
+	font-size: 18px;
+}
+
+
+
+/* 3번째 섹션 */
+.section03Text {
+	margin-top: 80px;
+}
+
+..section03Exp {
+	margin-bottom: 20px;
+}
+
+.picBoxWrap {
+	margin: 20px auto 0px;
+}
+
+.picBox {
+	padding: 5px; 
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	margin-right: 3px;
+    width:210px; 
+    background: #fff; 
+    border-radius: 5px;
+    border:1px solid #ddd; 
+    box-shadow: 1px 1px #ccc; 
+    padding-bottom: 10px;}
+
+.pic{
+	width: 99%;
+	border-radius: 2px;
+	padding-bottom:10px;}
+
+.picBox {}
+.picBox p {
+    padding-top: 6px;
+	text-align: center;
+}
+	
+.userPic {
+    margin-left: 5px; 
+    width:35px; 
+    height: 35px; 
+    border-radius: 50%; 
+    background: #ccc;}
+
+
+
+/* 4번째 섹션*/
+#fourthSection {
+}
+
+.section4Wrap {
+}
+
+.section04Text {
+	margin-top: 20px;
+}
+
+#wdr-list-box {
+	clear: both;
+	margin: auto;
+	width: 340px;
+}
+
+ul.wdr-postList>li {
+    float: left;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 17px;
+}
+
+.wdr-postGrid {
+    background: #eee;
+    margin: auto  !important;
+    height: 120px  !important;
+    margin-bottom: 23px  !important;
+    border-radius: 10px  !important;
+    overflow: hidden !important;
+}
+
+.wdr-title {
+    display: block;
+    margin-top: 22px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    text-shadow: 1px 1px #fff;
+}
+
+.wdr-post-cnt {
+    clear: both;
+    display: block;
+    font-size: 10px;
+    text-shadow: 1px 1px #fff;
+    color: #999;
+    margin-left: 11px;
+    padding-top: 5px;
+}
+
+.wdr-btn-group {
+    position: absolute;
+    right: 10px;
+    bottom: 19px;
+}
+
+
+#wdr-list-wrap {
+    clear: both !important;
+    margin: 0 !important;
+}
+
+#wdr-thumb-wrap {
+    margin: 0 !important;
+    text-align: center;
+}
+
+.wdr-content {
+    padding: 5px !important;
+}
+
+.wdr-grid {
+    width: 100% !important;
+    height: 250px !important;
+    border-radius: 10px;
+    background: #fff ;
+    padding: 5px 0px 0px 6px;
+    margin: 3px;
+    cursor: pointer;
+    box-shadow: 1px 1px 0px #ccc;
+}
+
+#wdr-thumb-wrap {
+    width: 98%;
+    margin: 3px;
+    overflow: hidden;
+    margin: 3px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.wdr-thumb {
+    padding:1px;
+    overflow: hidden;
+    height: 90px;
+    background: #eee;
+    background-size: 120%;
+}
+
+.wdr-thumb:nth-child(1), 
+.wdr-thumb:nth-child(4) {
+    margin-left: -2px
+}
+.wdr-thumb:nth-child(2), 
+.wdr-thumb:nth-child(5) {
+        margin-left: 1px;
+}
+.wdr-thumb:nth-child(3), 
+.wdr-thumb:nth-child(6) {
+        margin-left: 1px;
+}
+.wdr-thumb:nth-child(1), 
+.wdr-thumb:nth-child(2), 
+.wdr-thumb:nth-child(3) {
+        margin-top: -1px;
+}
+.wdr-thumb:nth-child(4), 
+.wdr-thumb:nth-child(5), 
+.wdr-thumb:nth-child(6) {
+        margin-top: 1px;
+}
+
+.wdr-thumb:nth-child(1) {
+	background: url('images/pic01.jpg') no-repeat;
+	background-size: 120%;
+}
+
+.wdr-thumb:nth-child(2) {
+	background: url('images/pic02.jpg') no-repeat center center;
+	background-size: 120%;
+}
+
+.wdr-thumb:nth-child(3) {
+	background: url('images/pic03.jpg') no-repeat center;
+	background-size: 150%;
+}
+
+.wdr-thumb:nth-child(4) {
+	background: url('images/pic05.jpg') no-repeat;
+	background-size: 120%;
+}
+
+.wdr-thumb:nth-child(5) {
+	background: url('images/pic06.jpg') no-repeat;
+	background-size: 120%;
+}
+
+.wdr-thumb:nth-child(6) {
+	background: url('images/pic07.png') no-repeat;
+	background-size: 120%;
+}
+

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="WardrobeMapper">
+    
+	<resultMap id="wardrobeSelectMap" type="wardrobe">
+		<result property="cls_no" column="cls_no" jdbcType="NUMERIC" />
+		<result property="cls_name" column="cls_name" jdbcType="VARCHAR" />
+		<result property="user_no" column="user_no" jdbcType="NUMERIC" />
+	
+        <result property="follower" column="follower" jdbcType="NUMERIC" />
+        <result property="following" column="following" jdbcType="NUMERIC" />		
+		
+        <association property="follow"  javaType="user">
+            <id property="user_no"       column="user_no"     jdbcType="NUMERIC"/>
+            <id property="nick"    column="nick"  jdbcType="VARCHAR" />
+            <id property="email" column="email"  jdbcType="VARCHAR" />
+            <id property="phot_path" column="phot_path" jdbcType="VARCHAR" />
+        </association>
+		
+        <association property="hang"  javaType="style">
+	        <id property="styleNo"                column="STYLE_NO"       jdbcType="NUMERIC" />
+	        <id property="fileName"             column="STY_IMGPATH"        jdbcType="VARCHAR" />
+	        <id property="tnFileName"        column="STY_TN_IMGPATH"         jdbcType="VARCHAR" />
+	        <id property="styleTitle"              column="STY_TITLE"      jdbcType="VARCHAR" />
+	        <id property="infomation1"        column="STY_INFO1"      jdbcType="VARCHAR" />
+	        <id property="infomation2"       column="STY_INFO2"      jdbcType="VARCHAR" />
+	        <id property="infomation3"       column="STY_INFO3"      jdbcType="VARCHAR" />
+	        <id property="infomation4"       column="STY_INFO4"      jdbcType="VARCHAR" />
+	        <id property="infomation5"       column="STY_INFO5"      jdbcType="VARCHAR" />
+	        <id property="styleLike"              column="STY_LIKE"       jdbcType="VARCHAR" />
+	        <id property="hashTagString"   column="STY_HASHTAG"        jdbcType="VARCHAR" />
+	        <id property="regDate"               column="STY_REG_DATE"       jdbcType="DATE" />
+	        <id property="styleDesc"             column="STY_DESC"       jdbcType="CLOB" />
+        </association>
+
+	</resultMap>
+    
+	<!-- SQL : INSERT -->
+	<insert id="addWardrobe" parameterType="wardrobe">
+		INSERT
+		INTO myCloset(cls_no, user_no, cls_name)
+		VALUES (
+		seq_mycloset_cls_no.nextval,
+		#{user_no:NUMERIC},
+		#{cls_name:VARCHAR})
+	</insert>
+    
+	<!-- SQL : SELECT ONE -->
+	<select id="getWardrobeByUserNo" parameterType="wardrobe" resultMap="wardrobeSelectMap">
+		SELECT
+		user_no, cls_no, cls_name
+		FROM myCloset
+		WHERE user_no = #{user_no}
+		                AND cls_name = #{cls_name}
+	</select>
+	
+	<!-- SQL : SELECT ONE -->
+	<select id="getWardrobeByClsNo" parameterType="integer" resultMap="wardrobeSelectMap">
+		SELECT
+		user_no, cls_no, cls_name
+		FROM myCloset
+		WHERE cls_no = #{value}
+	</select>
+	
+	
+	<!-- SQL : SELECT LIST -->
+	<select id="getWardrobeList" parameterType="INTEGER" resultMap="wardrobeSelectMap">
+		SELECT
+		cls_no, cls_name
+		FROM myCloset
+		WHERE user_no = #{value}
+		ORDER BY cls_no DESC
+	</select>
+<!-- 	
+	SQL : SELECT LIST
+	<select id="getWardClsList" parameterType="INTEGER" resultMap="wardrobeSelectMap">
+	SELECT	i.CL_NO , i.CLS_NO , M.CLS_NAME ,M.USER_NO ,i.STYLE_NO
+	FROM myCloset m , into_cls i
+	WHERE m.cls_no = i.cls_no(+)
+        AND  m.user_no = #{value}
+	ORDER BY cls_no DESC
+	</select> -->
+	
+	<!-- SQL : UPDATE -->
+	<update id="updateWardrobe" parameterType="wardrobe">
+		UPDATE myCloset
+		<set>
+			cls_name = #{cls_name}
+		</set>
+		WHERE cls_no = #{cls_no}
+	</update>
+
+	<!-- SQL : DELETE -->
+	<delete id="deleteWardrobe" parameterType="int">
+		DELETE
+        FROM myCloset
+        WHERE cls_no = #{value}
+	</delete>
+	
+	
+	
+    <!-- SQL : INSERT // FOLLOW -->
+    <insert id="addFollow" parameterType="wardrobe">
+        INSERT
+        INTO follow(follower, following)
+        VALUES (
+            #{follower:NUMERIC},
+            #{following:NUMERIC})
+    </insert>
+    
+    <!-- SQL : DELETE // UNFOLLOW -->
+    <delete id="deleteFollow" parameterType="wardrobe">
+        DELETE
+        FROM follow
+        WHERE follower = #{follower}
+                        AND following = #{following}
+    </delete>
+    
+    <!-- SQL : SELECT ONE // FOLLOW 여부 -->
+    <select id="getFollow" parameterType="wardrobe" resultType="int">
+        SELECT COUNT(*)
+        FROM follow
+        WHERE follower = #{follower}
+                        AND following = #{following}
+    </select>
+    
+    <!-- SQL : SELECTLIST // FOLLOWER LIST -->
+    <select id="getFollowerList" parameterType="int" resultMap="wardrobeSelectMap">
+        SELECT
+        flw.follower, us.user_no, us.email, us.nick, us.phot_path
+        FROM follow flw, user_info us
+        WHERE flw.following = #{value}
+                        AND flw.follower = us.user_no
+    </select>
+    
+    <!-- SQL : SELECTLIST // FOLLOWING LIST -->
+    <select id="getFollowingList" parameterType="int" resultMap="wardrobeSelectMap">
+        SELECT
+        flw.following, us.user_no, us.email, us.nick, us.phot_path
+        FROM follow flw, user_info us
+        WHERE flw.follower = #{value}
+                        AND flw.following = us.user_no
+    </select>
+    
+        
+    <!-- SQL : SELECT ONE // FOLLOWER COUNT -->
+    <select id="getFollowerCount" parameterType="int" resultType="int">
+        SELECT COUNT(*)
+        FROM follow
+        WHERE following = #{value}
+    </select>
+    
+    <!-- SQL : SELECT ONE // FOLLOWING COUNT -->
+    <select id="getFollowingCount" parameterType="int" resultType="int">
+        SELECT COUNT(*)
+        FROM follow
+        WHERE follower = #{value}
+    </select>
+    
+    <!-- SQL : SELECT LIST // DEFAULT WARDROBE // POST PHOTO_PATH -->
+    <select id="getMyPostThumb" parameterType="int" resultMap="wardrobeSelectMap">
+        SELECT
+        sty_tn_imgpath
+        FROM style
+        WHERE user_no = #{value}
+        ORDER BY style_no DESC
+    </select>
+
+    <!-- SQL : SELECT ONE // DEFAULT WARDROBE // POST COUNT -->
+    <select id="getMyPostCount" parameterType="int" resultType="int">
+        SELECT COUNT(*)
+        FROM style
+        WHERE user_no = #{value}
+    </select>
+    
+    <!-- //////////////////////////////////////  옷장 디테일 페이지 ////////////////////////////////////// -->
+    
+    
+    
+</mapper>

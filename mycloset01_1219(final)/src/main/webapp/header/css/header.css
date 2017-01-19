@@ -1,0 +1,501 @@
+@CHARSET "UTF-8" !important;
+
+#headerWrap {
+    width: 100% !important;
+    height: 90px !important;
+    position: relative !important;
+    border-bottom: 1px solid #eee !important;
+}
+
+#header {
+    width: 87% !important;
+    height: 62px !important;
+    margin: auto !important;
+    position: relative !important;
+}
+
+#header h1.hd-logo {
+    position: absolute !important;
+    left: 5px !important;
+    top: -26px !important;
+}
+
+#hd-logo-svg {
+}
+
+#hd-search {
+    position: absolute !important;
+    right: 240px !important;
+    left: 140px !important;
+    top: 29px !important;
+}
+
+#hd-search:focus {
+	box-shadow: none !important;
+}
+
+#hd-icon-search {
+	z-index: 2 !important;
+	position: absolute !important;
+	left: 12px !important;
+	top: 10px !important;
+	color:#ccc !important;
+}
+
+.hd-searchBox {
+	box-shadow: none !important;
+	z-index:1 !important;
+    padding-left: 42px !important;
+    padding-bottom: 5px !important;
+    width: 97% !important;
+    height: 35px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding-top: 5px !important;
+    background: #eee !important;
+    transform: perspective(1px) translateZ(0) !important;
+    box-shadow: 0 0 1px transparent !important;
+    overflow: hidden !important;
+    transition-duration: 0.5s !important;
+    transition-property: background-color !important;
+}
+
+.hd-searchBox:focus {
+	box-shadow: none !important;
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+}
+
+#hd-nav {
+    float: right !important;
+    margin-right: 20px !important;
+    margin-top: 32px !important;
+}
+
+#hd-gnb>li {
+    display: block !important;
+    float: left !important;
+    text-align: center !important;
+    margin-left: 12px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+}
+
+#hd-gnb>li:hover,
+#hd-gnb>li:focus {
+}
+
+/* 
+#hd-gnb>li>a {
+    padding: 2px 1px !important;
+    border-bottom: 3px solid #eee !important;
+    text-align: right !important;
+    font-weight: 500 !important;
+    display: block !important;
+    font-size: 12px !important;
+    color: #333 !important;
+    
+   sweep-to-left
+    display: inline-block !important;
+    vertical-align: middle !important;
+    transform: perspective(1px) translateZ(0) !important;
+    box-shadow: 0 0 1px transparent !important;
+    position: relative !important;
+    transition-property: color !important;
+    transition-duration: 0.3s !important;
+    margin: 0px !important; 
+}
+
+#hd-gnb>li>a:hover,
+#hd-gnb>li>a:focus {
+	text-decoration: none !important;
+	border-bottom: 2px solid #56eda8 !important;
+	color: #56eda8 !important;
+}
+
+
+sweep-to-left:before
+#hd-gnb>li>a:before {
+    content: "" !important;
+    position: absolute !important;
+    z-index: -1 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: #56eda8 !important;
+    transform: scaleX(0) !important;
+    transition-duration: 0.3s !important;
+    transition-timing-function: ease-out !important;
+}
+
+#hd-gnb>li>a:hover:before {
+    transform: scaleX(1) !important;
+} */
+
+#hd-gnb>li:last-child>a {
+    margin-right: 0px !important;
+}
+
+#hd-gnb>li>ul {
+	z-index: 200 !important;
+    position: absolute !important;
+    top: 95px !important;
+    background: #fff !important;
+    border: 1px solid #eee !important;
+    border-radius: 5px !important;
+    box-shadow: 2px 2px 5px #999 !important;
+}
+
+#hd-gnb>li>ul.hd-gnb-sub>li>a {
+    display: block !important;
+    font-size: 12px !important;
+}
+
+/* upload detail css */
+#hd-gnb li:first-child .hd-gnb-sub {
+    width: 150px !important;
+    height: 50px !important;
+    text-align: center !important;
+}
+
+#hd-gnb li:first-child .hd-gnb-sub li a {
+    font-size: 12px !important;
+    line-height: 30px !important;
+    margin: 10px !important;
+    border-radius: 10px !important;
+}
+
+#hd-gnb li:first-child .hd-gnb-sub li:hover a {
+    background: #eee !important;
+}
+
+/* message detail css*/
+#hd-gnb li:nth-child(2) .hd-gnb-sub {
+    width: 220px !important;
+    /* height: 300px !important; */
+    text-align: center !important;
+}
+
+.hd-msg-tab {
+    display: inline-block !important;
+    width:96% !important;
+    background: #eee !important;
+    border-radius: 10px !important;
+    margin-top:5px
+}
+
+.hd-msg-tab>span{
+    display: inline-block !important;
+    width: 96% !important;
+    border-radius: 10px !important;
+    margin:2px !important;
+}
+
+.hd-msg-tab>span:FIRST-CHILD{
+    margin-top: 4px !important;
+}
+
+.hd-msg-tab>span:NTH-CHILD(2){
+    margin-bottom: 4px !important;
+}
+
+.hd-tab-msg {
+    background: #fff !important;
+}
+
+.hd-tab-bot {
+    height: 30px !important;
+    background: #0084ff !important;
+    line-height: 30px !important;
+    padding-top: 5px !important;
+}
+
+
+.hd-msg-tab a{
+    font-size: 11px !important;
+    line-height: 30px !important;
+    font-weight: 500 !important;
+}
+
+.hd-msg-txt {
+    display: block !important;
+    width: 100% !important; 
+    margin-top:5px !important;
+    font-size: 11px !important;
+    line-height: 20px !important;
+    color:#999 !important;
+    text-shadow: 1px 1px #fff !important;
+    background: #eee !important;
+}
+
+.firstMsgList {
+    clear: both !important;
+    padding: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+.hd-msgList {
+    border-bottom: 1px solid #eee !important;
+    margin: auto !important;
+    height: 60px !important;
+    text-align: left !important;
+    padding: 10px 5px 5px 5px !important;
+    transform: perspective(1px) translateZ(0) !important;
+    box-shadow: 0 0 1px transparent !important;
+    overflow: hidden !important;
+    transition-duration: 0.3s !important;
+    transition-property: background-color !important;
+}
+
+.hd-msgList:hover {
+    background-color: #eee !important;
+}
+
+.hd-receive-msg-list02 {
+    padding: 0px !important;
+}
+
+.msgUserPic {
+    width: 40px !important;
+    height: 40px !important;
+    background: #eee !important;
+    border-radius: 50% !important;
+    float: left !important;
+    margin-right: 15px !important;
+}
+
+.msgUserId {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    font-size: 13px !important;
+    display: block !important;
+    text-align: left !important;
+}
+
+.userMsg {
+    font-size: 12px !important;
+    color: #aaa !important;
+}
+
+/* my account detail css */
+#hd-gnb>li:LAST-CHILD {
+	border-radius: 0px !important;
+	border-left: 1px solid #eee !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
+
+span.hd-img-box {
+	width: 26px !important;
+	height: 26px !important;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 50%;
+	margin-top: 3px;
+}
+
+img.hd-my-img {
+	width: 100%;
+	margin: auto;
+}
+
+span.hd-my-nick {
+	display: inline-block !important;
+	margin-left: 2px !important;
+	font-weight: 500 !important;
+}
+
+/* 
+#hd-gnb li:last-child .hd-gnb-sub {
+    width: 200px !important;
+    text-align: center !important;
+}
+.hd-sub-account-bar {
+    height: 24px !important;
+    line-height: 24px !important;
+    font-size: 12px !important;
+    text-shadow: 1px 1px #fff !important;
+    padding: 0px 10px !important;
+    border-bottom: 1px solid #ddd !important;
+    background: #eee !important;
+}
+
+.hd-sub-account-bar span {
+}
+
+.hd-account-bar-id {
+    float: left !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+}
+
+.hd-account-bar-logout {
+    float: right !important;
+    font-size: 11px !important;
+    color: #777 !important;
+}
+
+.hd-sub-account {
+    margin-top: 9px !important; 
+    height: 36px !important;
+}
+.hd-account {
+    display: block !important;
+    width:100% !important;
+    height: 52px !important;
+    border-bottom: 1px solid #eee !important;
+}
+.hd-my-img {
+    float: left !important;
+    margin-left: 10px !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    border: 1px solid #eee !important;
+    overflow: hidden !important;
+}
+.hd-my-nick, .hd-my-email {
+    float: left !important;
+    margin-left: 21px !important;
+}
+.hd-my-nick {
+    font-size: 14px !important;
+    line-height: 25px !important;
+}
+.hd-my-email {
+    color: #bbb !important;
+}
+.hd-sub-account-list {
+    margin-top: 30px !important;
+    text-align: center !important;
+}
+.hd-sub-account-list ul li {
+    margin: 2px 5px 2px 5px !important;
+    font-size: 12px !important;
+    line-height: 30px !important;
+    border-radius: 10px !important;
+}
+.hd-sub-account-list ul li:first-child {
+}
+.hd-sub-account-list ul li:hover {
+    background: #eee !important;
+}
+.hd-sub-account-list {
+    margin-bottom: 12px !important;
+}
+.hd-account-list-wdr  {
+    margin-top: 10px !important;
+}
+.hd-account-list-info {
+}
+ */
+
+/* Sub Menu Position control */
+#hd-gnb li:first-child ul.hd-gnb-sub {
+    right: 130px !important;
+}
+
+#hd-gnb li:nth-child(2) ul.hd-gnb-sub {
+    right: 40px !important;
+}
+
+#hd-gnb li:last-child ul.hd-gnb-sub {
+    right: 30px !important;
+}
+/* ========================================= */
+/* 파일 업로드 버튼 CSS 끝 */
+#uploadModal .modal-content {
+	width:400px; 
+}
+
+#uploadModal .modal-dialog {
+  width:400px;	
+}
+.modal-dialog2 {
+  width:440px;
+  margin-left: 33.5%
+}
+
+#uploadLabel {
+	margin-bottom: 20px;
+}
+
+.modal-content2{
+  padding: 20px;	
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* 스타일 추가 버튼 */
+
+.addStyleToolBox {
+  margin-top: -15px;	
+}
+
+.addStylePTag {
+  font-size: 15px;
+  float:left;
+  margin-right:130px;
+}
+
+.styleButton {
+	width:20px;
+	margin-left:5px;
+	cursor: pointer;
+}
+
+.aTagButtonBox {
+	margin-top:5px;
+}
+
+/* 인풋태그 */
+
+.form-group {
+	margin-top:-10px;
+}
+
+#styleTitle{
+	margin-top:-10px;
+}
+
+.form-control {
+ width:100px;
+}
+
+.descInfo {
+	margion-top:-10px;
+	float: left;
+	border:white;
+	background:white;
+	margin-bottom:0px;
+}
+
+#styleInfo {
+ width:240px;
+ float:left;
+ margin-right:20px;
+}
+
+#priceInfo {
+ width:100px;
+}
+
+.imgBox {
+	margin-top:5px;
+	margin-bottom: 10px;
+}
+
+.styleTagBox {
+	margin-top:-12%;
+	margin-bottom:5%;
+	margin-left: 50%;
+}
+
+.form-group > .close {
+	position: inherit;
+	color:black;
+	opacity: 0.7;
+	margin-top:-28px;
+	margin-left:-10px;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g>
+	<g>
+		<polygon fill="#392DAA" stroke="#392DAA" stroke-linejoin="round" stroke-miterlimit="10" points="86.5,71.956 78.5,70.542 
+			78.5,32.733 86.5,31.31 		"/>
+		
+			<rect x="87.465" y="31.312" fill="none" stroke="#392DAA" stroke-linejoin="round" stroke-miterlimit="10" width="2.854" height="40.645"/>
+		<polygon fill="#392DAA" points="81,49 76.159,49 75.25,42 81,42 		"/>
+		<polygon fill="#392DAA" points="81,59 74.995,59 76.159,52 81,52 		"/>
+	</g>
+	<g>
+		<path fill="#392DAA" d="M18.013,49.957c0-17.629,12.773-31.92,28.529-31.92c0.258,0,0.514,0.014,0.771,0.022l-0.002-0.43
+			l-2.716-0.322c-0.348,0-6.083,0.649-6.434,0.673C21.714,19.1,9.179,32.3,9.179,49.928c0,17.033,11.164,30.975,26.486,31.898
+			l3.053,0.29l7.328,0.576l0.439-0.817C30.755,81.839,18.013,67.563,18.013,49.957z"/>
+		
+			<ellipse fill="none" stroke="#392DAA" stroke-width="3" stroke-miterlimit="10" cx="47.089" cy="49.957" rx="28.529" ry="31.919"/>
+		
+			<ellipse fill="none" stroke="#392DAA" stroke-width="2" stroke-miterlimit="10" cx="47.089" cy="49.957" rx="24.828" ry="27.779"/>
+	</g>
+	<text transform="matrix(1 0 0 1 38.8359 44.334)"><tspan x="0" y="0" fill="#3F3B90" font-family="'Calibri-BoldItalic'" font-size="13.6806">my</tspan><tspan x="-14.071" y="16.964" fill="#3F3B90" font-family="'Calibri-BoldItalic'" font-size="18.0584">Closet</tspan></text>
+</g>
+<g>
+	<g>
+		<polygon fill="#392DAA" stroke="#392DAA" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="545,766.277 
+			529,763.691 529,694.602 545,692 		"/>
+		
+			<rect x="544.661" y="692.002" transform="matrix(1 0.0015 -0.0015 1 1.0934 -0.8193)" fill="none" stroke="#392DAA" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" width="5.213" height="74.275"/>
+		<polygon fill="#392DAA" points="534,724 524,724 522.34,711 534,711 		"/>
+		<polygon fill="#392DAA" points="534,743 521.873,743 524,730 534,730 		"/>
+	</g>
+	<g>
+		<path fill="#392DAA" d="M417.744,726.074c0-32.215,23.342-58.33,52.134-58.33c0.472,0,0.938,0.026,1.407,0.041L471.281,667
+			l-4.963-0.588c-0.637,0-11.116,1.188-11.758,1.23c-30.053,2.045-52.961,26.166-52.961,58.381c0,31.125,20.4,56.604,48.4,58.29
+			l5.578,0.53l13.391,1.053l0.803-1.494C441.028,784.337,417.744,758.25,417.744,726.074z"/>
+		
+			<ellipse fill="none" stroke="#392DAA" stroke-width="3" stroke-miterlimit="10" cx="470.877" cy="726.074" rx="52.133" ry="58.33"/>
+		
+			<ellipse fill="none" stroke="#392DAA" stroke-width="2" stroke-miterlimit="10" cx="470.878" cy="726.074" rx="45.37" ry="50.764"/>
+	</g>
+	<text transform="matrix(1 0 0 1 455.3613 715.8008)"><tspan x="0" y="0" fill="#3F3B90" font-family="'Calibri-BoldItalic'" font-size="25">my</tspan><tspan x="-25.713" y="31" fill="#3F3B90" font-family="'Calibri-BoldItalic'" font-size="33">Closet</tspan></text>
+</g>
+</svg>
